@@ -44,11 +44,13 @@ export class ApiService {
       for (const key in planets) {
         const planet: Object = {
           name: planets[key].name,
+          //population: (planets[key].name == 'Naboo') ? 6000000 : planets[key].population,
           population: planets[key].population
         }
         planetsArray[planets[key].url] = planet;
         // if planet is in the chart (Part 2) we adding the planet to the chart array
         if (planetsToFilter.includes(planets[key].url)) {
+
           planetsArray.chart.push(planet);
         }
       }

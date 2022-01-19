@@ -3,11 +3,13 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  justify-content: space-between;
   padding: 5px;
 }
 .column {
   margin: 5px;
   border: 1px solid #000000;
   background-color: #c0c0c0;
-  min-height: 5%;
+  min-height: 10%;
+  text-align: center;
 }

@@ -6,11 +6,12 @@
       class="column"
       *ngFor="let planet of data"
       [style.height]="
-        (planet.population / data[0].population) * 100 + '% !important'
+        (planet.population / data[0].population | percent) + ' !important'
       "
     >
-      {{ planet.population }}
       {{ planet.name }}
+      <br />
+      {{ planet.population }}
     </div>
   </div>
 </div>
