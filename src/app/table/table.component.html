@@ -1,0 +1,28 @@
+<p>Part 1</p>
+
+<div *ngIf="data; else loader">
+  <table>
+    <tr>
+      <td>Vehicle name with the largest sum</td>
+      <td>{{ data.name }}</td>
+    </tr>
+    <tr>
+      <td>Related home planets and their respective population</td>
+      <td>
+        <div *ngFor="let planet of data.planets">
+          Planet {{ planet.name }} :Population {{ planet.population }}
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Related pilot names</td>
+      <td>
+        <div *ngFor="let pilot of data.drivers">
+          {{ pilot }}
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<ng-template #loader> loading.... </ng-template>

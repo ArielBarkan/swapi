@@ -1,0 +1,17 @@
+<p>Part 2</p>
+
+<div *ngIf="data; else loader">
+  <div class="chartContainer">
+    <div
+      class="column"
+      *ngFor="let planet of data"
+      [style.height]="
+        (planet.population / data[0].population) * 100 + '% !important'
+      "
+    >
+      {{ planet.population }}
+      {{ planet.name }}
+    </div>
+  </div>
+</div>
+<ng-template #loader> loading.... </ng-template>
